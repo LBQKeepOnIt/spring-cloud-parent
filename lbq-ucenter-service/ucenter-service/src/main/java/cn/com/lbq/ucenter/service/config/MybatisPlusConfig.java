@@ -15,7 +15,7 @@
  * Author: shide (wangcheng@shidegroup.com)
  */
 
-package cn.com.lbq.ucenter.config;
+package cn.com.lbq.ucenter.service.config;
 
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.extension.injector.LogicSqlInjector;

@@ -1,4 +1,4 @@
-package cn.com.lbq.order;
+package cn.com.lbq.order.service;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-package cn.com.lbq.order.controller;
+package cn.com.lbq.order.service.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,6 +1,6 @@
-package cn.com.lbq.order.controller;
+package cn.com.lbq.order.service.controller;
 
-import cn.com.lbq.order.service.OrderService;
+import cn.com.lbq.order.service.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
-package cn.com.lbq.ucenter.mapper;
+package cn.com.lbq.ucenter.service.mapper;
 
-import cn.com.lbq.ucenter.entity.User;
+import cn.com.lbq.ucenter.api.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

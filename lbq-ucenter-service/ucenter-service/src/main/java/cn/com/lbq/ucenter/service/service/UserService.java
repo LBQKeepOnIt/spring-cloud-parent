@@ -1,7 +1,7 @@
-package cn.com.lbq.ucenter.service;
+package cn.com.lbq.ucenter.service.service;
 
-import cn.com.lbq.ucenter.entity.User;
-import cn.com.lbq.ucenter.mapper.UserMapper;
+import cn.com.lbq.ucenter.api.entity.User;
+import cn.com.lbq.ucenter.service.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

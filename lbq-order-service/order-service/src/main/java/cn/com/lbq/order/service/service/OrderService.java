@@ -1,7 +1,7 @@
-package cn.com.lbq.order.service;
+package cn.com.lbq.order.service.service;
 
 import cn.com.lbq.order.api.entity.Order;
-import cn.com.lbq.order.mapper.OrderMapper;
+import cn.com.lbq.order.service.mapper.OrderMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -1,6 +1,6 @@
-package cn.com.lbq.ucenter.controller;
+package cn.com.lbq.ucenter.service.controller;
 
-import cn.com.lbq.ucenter.service.UserService;
+import cn.com.lbq.ucenter.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

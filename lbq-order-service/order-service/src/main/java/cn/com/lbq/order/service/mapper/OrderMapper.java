@@ -1,4 +1,4 @@
-package cn.com.lbq.order.mapper;
+package cn.com.lbq.order.service.mapper;
 
 import cn.com.lbq.order.api.entity.Order;
 import cn.com.lbq.order.api.entity.OrderExample;

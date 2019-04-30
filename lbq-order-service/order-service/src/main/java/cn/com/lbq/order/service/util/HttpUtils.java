@@ -1,4 +1,4 @@
-package cn.com.lbq.order.util;
+package cn.com.lbq.order.service.util;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

@@ -1,4 +1,4 @@
-package cn.com.lbq.ucenter.config;
+package cn.com.lbq.ucenter.service.config;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.common.base.CaseFormat;
