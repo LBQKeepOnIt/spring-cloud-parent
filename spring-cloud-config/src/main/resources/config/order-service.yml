@@ -4,10 +4,22 @@ server:
 spring:
   application:
     name: order-service
+  # 数据源
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/lbq_cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
 
 eureka:
   client:
     serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/ # one eureka server
+      defaultZone: http://localhost:8761/eureka/ # one eureka server
 #      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/ # two eureka server
-      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/ # three eureka server
+#      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/ # three eureka server
+
+
+mybatis:
+  type-aliases-package: cn.com.lbq.order.api.entity
+  mapperLocations: classpath:mapper/OrderMapper.xml
