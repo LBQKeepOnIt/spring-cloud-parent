@@ -58,7 +58,11 @@
             <artifactId>feign-okhttp</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>cn.com.lbq</groupId>
+            <artifactId>common-spring-cloud</artifactId>
+            <version>${lbq.common.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

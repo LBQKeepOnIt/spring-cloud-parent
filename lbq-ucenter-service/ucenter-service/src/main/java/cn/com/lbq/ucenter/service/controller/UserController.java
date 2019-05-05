@@ -1,5 +1,7 @@
 package cn.com.lbq.ucenter.service.controller;
 
+import cn.com.lbq.ucenter.api.entity.User;
+import cn.com.lbq.ucenter.api.entity.UserPower;
 import cn.com.lbq.ucenter.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +24,17 @@ public class UserController {
     @GetMapping("/getUser")
     public Object getUser(@RequestParam("userId") String userId){
         return userService.getUser(userId);
+    }
+
+    @GetMapping("/saveUser")
+    public Object saveUser(){
+        User user = new User();
+        user.setName("trans4");
+
+        UserPower up = new UserPower();
+        userService.saveUserAndPo(user,up);
+
+        return null;
     }
 
 }

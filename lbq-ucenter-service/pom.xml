@@ -16,5 +16,11 @@
         <module>ucenter-service</module>
     </modules>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>cn.com.lbq</groupId>
+            <artifactId>common-spring-cloud</artifactId>
+            <version>${lbq.common.version}</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -33,7 +33,7 @@ import org.springframework.context.annotation.Configuration;
 */
 
 @Configuration
-@MapperScan({"cn.com.lbq.*.mapper"})
+@MapperScan({"cn.com.lbq.ucenter.*.mapper"})
 public class MybatisPlusConfig {
 
 	/**

@@ -1,42 +1,45 @@
 package cn.com.lbq.ucenter.api.entity;
 
-import java.io.Serializable;
-
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
 /**
-* @Description:    
-* @Author: liboqing
-* @CreateDate: 2019/4/30 10:48
-*/
-
+ *  user_power
+ * @author liboqing 2019-05-05
+ */
 @Data
-public class User implements Serializable {
+public class UserPower implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户id
+     * id
      */
     @TableId(value = "id", type = IdType.ID_WORKER_STR)
     private String id;
 
     /**
-     * 用户名
+     * 姓名
      */
-    private String name;
+    private String realName;
 
     /**
-     * 年龄
+     * 身份证号
      */
-    private Integer age;
+    private String idNumber;
 
     /**
-     * 性别
+     * 证件正面图片url
      */
-    private String sex;
+    private String attachmentFrontUrl;
+
+    /**
+     * 证件反面图片url
+     */
+    private String attachmentBackUrl;
 
     /**
      * 创建时间
@@ -68,7 +71,7 @@ public class User implements Serializable {
      */
     private String delFlag;
 
-    public User() {
+    public UserPower() {
     }
 
 }

@@ -20,8 +20,8 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping("/getOrder")
-    public Object getUser(@RequestParam("orderId") String userId) {
-        return orderService.getOrder(userId);
+    public Object getUser(@RequestParam("orderId") String orderId) {
+        return orderService.getOrder(orderId);
     }
 
 }
