@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 /**
  * @Description:
@@ -13,8 +15,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
-@MapperScan("cn.com.lbq.order.mapper")
+@MapperScan("cn.com.lbq.order.service.mapper")
+@EnableFeignClients(basePackages = "cn.com.lbq.ucenter.api.client")
 public class SpringCloudOrderApplication {
 
     public static void main(String[] args) {

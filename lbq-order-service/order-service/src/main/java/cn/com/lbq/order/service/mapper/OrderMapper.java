@@ -1,30 +1,49 @@
 package cn.com.lbq.order.service.mapper;
 
 import cn.com.lbq.order.api.entity.Order;
-import cn.com.lbq.order.api.entity.OrderExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+/**
+ * 订单表
+ * @author liboqing 2019-05-06
+ */
+@Component
 public interface OrderMapper {
-    long countByExample(OrderExample example);
 
-    int deleteByExample(OrderExample example);
+    /**
+     * 新增
+     */
+    public int insert(@Param("order") Order order);
 
-    int deleteByPrimaryKey(String id);
+    /**
+     * 删除
+     */
+    public int delete(@Param("id") int id);
 
-    int insert(Order record);
+    /**
+     * 更新
+     */
+    public int update(@Param("order") Order order);
 
-    int insertSelective(Order record);
+    /**
+     * Load查询
+     */
+    public Order load(@Param("id") int id);
 
-    List<Order> selectByExample(OrderExample example);
+    /**
+     * 分页查询Data
+     */
+    public List<Order> pageList(@Param("offset") int offset,
+                                @Param("pagesize") int pagesize);
 
-    Order selectByPrimaryKey(@Param("id") String id);
+    /**
+     * 分页查询Count
+     */
+    public int pageListCount(@Param("offset") int offset,
+                             @Param("pagesize") int pagesize);
 
-    int updateByExampleSelective(@Param("record") Order record, @Param("example") OrderExample example);
-
-    int updateByExample(@Param("record") Order record, @Param("example") OrderExample example);
-
-    int updateByPrimaryKeySelective(Order record);
-
-    int updateByPrimaryKey(Order record);
+    Order getOrderById(@Param("id") String id);
 }

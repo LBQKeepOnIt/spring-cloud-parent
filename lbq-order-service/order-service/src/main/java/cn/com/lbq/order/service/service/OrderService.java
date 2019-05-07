@@ -2,6 +2,9 @@ package cn.com.lbq.order.service.service;
 
 import cn.com.lbq.order.api.entity.Order;
 import cn.com.lbq.order.service.mapper.OrderMapper;
+import cn.com.lbq.ucenter.api.client.UserClient;
+import cn.com.lbq.ucenter.api.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,8 +22,17 @@ public class OrderService {
 
     @Resource
     private OrderMapper orderMapper;
+    @Resource
+    private UserClient userClient;
 
-    public Order getOrder(String userId) {
-        return orderMapper.selectByPrimaryKey(userId);
+    public Order getOrder(String orderId) {
+        Order order = orderMapper.getOrderById(orderId);
+        try {
+            User user = userClient.getUser(order.getUserId());
+            String userId = user.getId();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        return order;
     }
 }

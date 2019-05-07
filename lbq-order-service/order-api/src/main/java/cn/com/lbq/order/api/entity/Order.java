@@ -26,4 +26,5 @@ public class Order {
 
     private String delFlag;
 
+    private String userId;
 }

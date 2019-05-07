@@ -1,5 +1,6 @@
 package cn.com.lbq.ucenter.api.client;
 
+import cn.com.lbq.ucenter.api.entity.User;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,7 @@ public class UserClientFallbackFactory implements FallbackFactory<UserClient> {
     public UserClient create(Throwable throwable) {
         return new UserClient() {
             @Override
-            public Boolean getUser(String orderId) throws Throwable {
+            public User getUser(String orderId) throws Throwable {
                 log.error("查询用户异常", throwable);
                 throw new RuntimeException("查询异常");
             }
