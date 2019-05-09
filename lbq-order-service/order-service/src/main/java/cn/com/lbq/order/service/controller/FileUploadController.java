@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @CreateDate: 2019/5/5 16:36
  */
 @RestController
-public class FileUploadContorller {
+public class FileUploadController {
 
     @PostMapping(value = "/file/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String fileUploadServer(MultipartFile file ) throws Exception{

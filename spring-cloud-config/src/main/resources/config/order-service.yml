@@ -10,6 +10,19 @@ spring:
     password: 123456
     url: jdbc:mysql://127.0.0.1:3306/lbq_cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true
     driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: lbqmq
+    password: lbqmq
+#  spring-cloud的配置
+  stream:
+    bindings:
+      mychannel:
+        group: lbqMq-order
+      myMessage:
+        group: order
+        content-type: application/json # 设置消息发送后为 json 格式，以便控制台查看，接收方会自动转换为 具体的消息数据格式
 
 
 eureka:
