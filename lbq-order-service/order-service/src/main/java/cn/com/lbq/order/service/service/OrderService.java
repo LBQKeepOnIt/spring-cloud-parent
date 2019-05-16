@@ -4,7 +4,6 @@ import cn.com.lbq.order.api.entity.Order;
 import cn.com.lbq.order.service.mapper.OrderMapper;
 import cn.com.lbq.ucenter.api.client.UserClient;
 import cn.com.lbq.ucenter.api.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
