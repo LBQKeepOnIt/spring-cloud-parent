@@ -18,25 +18,51 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${httpcore.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+
+        <!-- Spring Cloud OpenFeign的Starter的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>cn.com.lbq.study</groupId>
             <artifactId>ucenter-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${lbq.ucenter.api.version}</version>
         </dependency>
+
         <dependency>
             <groupId>cn.com.lbq.study</groupId>
             <artifactId>order-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${lbq.order.api.version}</version>
         </dependency>
         <!-- 引用Mybatis 和 Mysql驱动开始  -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.3.2</version>
+            <version>${mybatis.spring.boot.starter.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -59,8 +85,8 @@
         <!-- RabbitMQ -->
         <!--spring-boot的配置-->
         <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-amqp</artifactId>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-amqp</artifactId>-->
         <!--</dependency>-->
         <!--spring-cloud的配置-->
         <dependency>
@@ -70,39 +96,39 @@
     </dependencies>
 
     <build>
-    <plugins>
-    <plugin>
-        <groupId>org.mybatis.generator</groupId>
-        <artifactId>mybatis-generator-maven-plugin</artifactId>
-        <version>1.3.5</version>
-        <dependencies>
-            <dependency>
+        <plugins>
+            <plugin>
                 <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.5</version>
-            </dependency>
-        </dependencies>
-        <executions>
-            <execution>
-                <id>Generate MyBatis Artifacts</id>
-                <phase>package</phase>
-                <goals>
-                    <goal>generate</goal>
-                </goals>
-            </execution>
-        </executions>
-        <configuration>
-            <!--允许移动生成的文件 -->
-            <verbose>true</verbose>
-            <!-- 是否覆盖 -->
-            <overwrite>true</overwrite>
-            <!-- 自动生成的配置 -->
-            <configurationFile>
-                src/main/resources/mybatis-generator.xml
-            </configurationFile>
-        </configuration>
-    </plugin>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.mybatis.generator</groupId>
+                        <artifactId>mybatis-generator-core</artifactId>
+                        <version>1.3.5</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>Generate MyBatis Artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--允许移动生成的文件 -->
+                    <verbose>true</verbose>
+                    <!-- 是否覆盖 -->
+                    <overwrite>true</overwrite>
+                    <!-- 自动生成的配置 -->
+                    <configurationFile>
+                        src/main/resources/mybatis-generator.xml
+                    </configurationFile>
+                </configuration>
+            </plugin>
 
-    </plugins>
+        </plugins>
     </build>
 </project>

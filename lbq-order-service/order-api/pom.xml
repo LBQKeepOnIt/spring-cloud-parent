@@ -16,13 +16,13 @@
         <dependency>
             <groupId>io.github.openfeign.form</groupId>
             <artifactId>feign-form</artifactId>
-            <version>3.0.3</version>
+            <version>${feign.form.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.github.openfeign.form</groupId>
             <artifactId>feign-form-spring</artifactId>
-            <version>3.0.3</version>
+            <version>${feign.form.spring.version}</version>
         </dependency>
     </dependencies>
 

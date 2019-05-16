@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-annotation</artifactId>
-            <version>3.0.6</version>
+            <version>${mybatis.plus.annotation.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
