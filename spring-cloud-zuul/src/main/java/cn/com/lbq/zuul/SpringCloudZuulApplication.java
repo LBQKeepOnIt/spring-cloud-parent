@@ -2,6 +2,7 @@ package cn.com.lbq.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
@@ -11,8 +12,9 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  * @CreateDate: 2019/4/28 16:45
  */
 @SpringBootApplication
-@EnableZuulProxy
 @EnableDiscoveryClient
+@EnableZuulProxy
+@EnableCircuitBreaker
 public class SpringCloudZuulApplication {
 
     public static void main(String[] args) {

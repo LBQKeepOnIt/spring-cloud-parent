@@ -34,6 +34,7 @@
         <lbq.order.service.version>1.0-SNAPSHOT</lbq.order.service.version>
         <lbq.ucenter.api.version>1.0-SNAPSHOT</lbq.ucenter.api.version>
         <lbq.ucenter.service.version>1.0-SNAPSHOT</lbq.ucenter.service.version>
+        <spring.cloud.core.version>1.0-SNAPSHOT</spring.cloud.core.version>
 
         <!--其他-->
     <httpcore.version>4.4.10</httpcore.version>

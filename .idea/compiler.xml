@@ -13,6 +13,7 @@
         <module name="spring-cloud-core" />
         <module name="spring-cloud-euraka" />
         <module name="spring-cloud-gateway" />
+        <module name="spring-cloud-hystrix" />
         <module name="spring-cloud-zuul" />
         <module name="ucenter-api" />
         <module name="ucenter-service" />
@@ -34,6 +35,7 @@
       <module name="spring-cloud-core" options="-parameters" />
       <module name="spring-cloud-euraka" options="-parameters" />
       <module name="spring-cloud-gateway" options="-parameters" />
+      <module name="spring-cloud-hystrix" options="-parameters" />
       <module name="spring-cloud-zuul" options="-parameters" />
       <module name="ucenter-api" options="-parameters" />
       <module name="ucenter-service" options="-parameters" />
