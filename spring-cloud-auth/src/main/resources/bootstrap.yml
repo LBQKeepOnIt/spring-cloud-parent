@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-cloud-auth
+server:
+  port: 18555
+  servlet: 
+    contextPath: /uaa #web基路径
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:18761/eureka/
+  instance:
+    prefer-ip-address: true

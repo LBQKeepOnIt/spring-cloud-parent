@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+server:
+  port: 18666
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:18761}/eureka/
+security:
+  basic:
+    enabled: false
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

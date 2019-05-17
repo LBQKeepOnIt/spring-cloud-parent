@@ -1,12 +1,12 @@
-spring:
-  application:
-    name: order-service
-  cloud:
-    config:
-      uri: http://localhost:8888
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+#spring:
+#  application:
+#    name: order-service
+#  cloud:
+#    config:
+#      uri: http://localhost:18888
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'

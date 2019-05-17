@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+server:
+  port: 18777
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:18761}/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    ucenter-service:
+      path: /user/**
+      serviceId: ucenter-service
+
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      access-token-uri: http://localhost:18555/uaa/oauth/token #令牌端点
+      user-authorization-uri: http://localhost:18555/uaa/oauth/authorize #授权端点
+      client-id: spring-cloud-zuul #OAuth2客户端ID
+      client-secret: secret #OAuth2客户端密钥
+    resource:
+      jwt:
+        key-value: springcloudlbq #使用对称加密方式，默认算法为HS256

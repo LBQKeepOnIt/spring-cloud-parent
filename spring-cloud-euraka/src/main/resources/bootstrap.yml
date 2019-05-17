@@ -1,9 +1,26 @@
 spring:
   application:
     name: eureka-server
-  cloud:
-    config:
-      uri: http://localhost:8888
+#  cloud:
+#    config:
+#      uri: http://localhost:18888
+
+server:
+  port: 18761
+
+eureka:
+  instance:
+    hostname: localhost
+#    preferIpAddress: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    peer-eureka-nodes-update-interval-ms: 10000 #默认是10分钟即600000，这里为了验证改为10秒
+
+
 management:
   endpoints:
     web:

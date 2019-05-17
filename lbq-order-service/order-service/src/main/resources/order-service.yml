@@ -1,0 +1,39 @@
+server:
+  port: 12200
+
+spring:
+  application:
+    name: order-service
+
+  # 数据源
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/lbq_cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: lbqmq
+    password: lbqmq
+#  spring-cloud的配置
+  stream:
+    bindings:
+      mychannel:
+        group: lbqMq-order
+      myMessage:
+        group: order
+        content-type: application/json # 设置消息发送后为 json 格式，以便控制台查看，接收方会自动转换为 具体的消息数据格式
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:18761/eureka/ # one eureka server
+#      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/ # two eureka server
+#      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/ # three eureka server
+
+
+mybatis:
+  type-aliases-package: cn.com.lbq.order.api.entity
+  mapperLocations: classpath:mapper/OrderMapper.xml

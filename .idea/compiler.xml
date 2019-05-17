@@ -8,9 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="order-api" />
         <module name="order-service" />
+        <module name="spring-cloud-auth" />
         <module name="spring-cloud-config" />
+        <module name="spring-cloud-core" />
         <module name="spring-cloud-euraka" />
         <module name="spring-cloud-gateway" />
+        <module name="spring-cloud-zuul" />
         <module name="ucenter-api" />
         <module name="ucenter-service" />
       </profile>
@@ -26,9 +29,12 @@
       <module name="lbq-ucenter-service" options="-parameters" />
       <module name="order-api" options="-parameters" />
       <module name="order-service" options="-parameters" />
+      <module name="spring-cloud-auth" options="-parameters" />
       <module name="spring-cloud-config" options="-parameters" />
+      <module name="spring-cloud-core" options="-parameters" />
       <module name="spring-cloud-euraka" options="-parameters" />
       <module name="spring-cloud-gateway" options="-parameters" />
+      <module name="spring-cloud-zuul" options="-parameters" />
       <module name="ucenter-api" options="-parameters" />
       <module name="ucenter-service" options="-parameters" />
     </option>
