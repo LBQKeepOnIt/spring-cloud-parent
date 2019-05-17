@@ -12,6 +12,8 @@ spring-cloud-gateway     18666
 
 spring-cloud-zuul        18777
 
+sprign-cloud-hystrix     18444
+
 应用服务
 
 lbq-ucenter-service      12100

@@ -1,6 +1,5 @@
 package cn.com.lbq.zuul.service;
 
-import cn.com.lbq.gateway.filter.*;
 import cn.com.lbq.zuul.filter.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;

@@ -46,9 +46,11 @@
         <module>spring-cloud-config</module>
         <module>lbq-order-service</module>
         <module>spring-cloud-gateway</module>
+        <module>spring-cloud-zuul</module>
         <module>lbq-ucenter-service</module>
         <module>spring-cloud-auth</module>
         <module>spring-cloud-core</module>
+        <module>spring-cloud-hystrix</module>
     </modules>
 
     <parent>

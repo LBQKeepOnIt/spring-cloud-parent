@@ -1,0 +1,11 @@
+server:
+  port: 18444
+spring:
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:18888
+      name: config-info
+      profile: dev
+  application:
+    name: spring-cloud-hystrix
