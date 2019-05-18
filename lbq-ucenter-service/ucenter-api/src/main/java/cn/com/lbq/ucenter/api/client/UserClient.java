@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Author: liboqing
  * @CreateDate: 2019/4/29 14:13
  */
-@FeignClient(name = ServiceNameConstants.UCENTER_SERVICE,fallbackFactory = UserClientFallbackFactory.class)
+@FeignClient(name = ServiceNameConstants.UCENTER_SERVICE, fallbackFactory = UserClientFallbackFactory.class)
 public interface UserClient {
 
     @GetMapping(value = "/user/getUser")
     User getUser(@RequestParam("userId") String userId) throws Throwable;
+
+    @GetMapping(value = "/user/checkNameAndPassword")
+    User checkNameAndPassword(@RequestParam("name") String name, @RequestParam("password") String password) throws Throwable;
 
 }

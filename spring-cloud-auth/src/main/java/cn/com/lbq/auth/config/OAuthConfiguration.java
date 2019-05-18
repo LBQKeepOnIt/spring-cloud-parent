@@ -23,7 +23,7 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients
         .inMemory()
-        .withClient("zuul_server")
+        .withClient("spring-cloud-zuul")
         .secret("secret")
         .scopes("WRIGTH", "read").autoApprove(true)
         .authorities("WRIGTH_READ", "WRIGTH_WRITE")
@@ -46,7 +46,7 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
     @Bean
     protected JwtAccessTokenConverter jwtTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        converter.setSigningKey("springcloud123");
+        converter.setSigningKey("springcloudlbq");
         return converter;
     }
 }

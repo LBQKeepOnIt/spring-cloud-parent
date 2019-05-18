@@ -22,6 +22,12 @@ public class UserClientFallbackFactory implements FallbackFactory<UserClient> {
                 log.error("查询用户异常", throwable);
                 throw new RuntimeException("查询异常");
             }
+
+            @Override
+            public User checkNameAndPassword(String name, String password) throws Throwable {
+                log.error("查询用户异常", throwable);
+                throw new RuntimeException("查询异常");
+            }
         };
     }
 

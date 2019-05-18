@@ -9,11 +9,6 @@ eureka:
       defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:18761}/eureka/
   instance:
     prefer-ip-address: true
-zuul:
-  routes:
-    ucenter-service:
-      path: /user/**
-      serviceId: ucenter-service
 
 
 security:
@@ -28,3 +23,5 @@ security:
     resource:
       jwt:
         key-value: springcloudlbq #使用对称加密方式，默认算法为HS256
+
+
